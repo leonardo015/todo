@@ -11,6 +11,7 @@ import {
   Image
 } from 'react-native';
 import Home from './Screens/Home';
+import Icon from 'react-native-vector-icons/FontAwesome';
 const firebase = require("firebase");
 
 // Initialize Firebase
@@ -39,7 +40,7 @@ export default class ToDo extends Component {
         return null
       },
       RightButton(route, navigator, index, navState) {
-        return null
+        return <View style={ styles.rightButton }><Icon name="bolt" size={14} color="#FFF" /></View>
       },
       Title(route, navigator, index, navState) {
         return <View style={ styles.navTitle }><View><Text style={ styles.navTitleText }>ToDo</Text></View></View>
@@ -87,5 +88,11 @@ const styles = StyleSheet.create({
     lineHeight: 40,
     fontSize: 18,
     color: '#b5b5b7'
+  },
+  rightButton: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: (Platform.OS == 'ios') ? 12 : 16
   }
 });
