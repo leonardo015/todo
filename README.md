@@ -1,6 +1,6 @@
 # ToDo
 
-A React Native todo app integrated with a Firebase backend
+A React Native todo app with Firebase integration
 
 #### How to run:
 
